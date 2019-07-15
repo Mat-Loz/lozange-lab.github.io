@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+html { font-size: .45rem;}
+@media (min-width: 576px){
+	html { font-size: .7rem;}
+}
+@media (min-width: 768px) {
+	html { font-size: .9rem;}
+}
+@media (min-width: 992px) {
+	html { font-size: 1.0rem;}
+}
+@media (min-width: 1200px) {
+	html { font-size: 1.2rem;}
+}
+
+body{
+	background-color: #75C2AC;
+	font-family: "Lato";
+}
+
+.container-fluid { max-width: 1200px; }
+
+.link{
+	color: white;
+	text-shadow: 3px 3px 3px #000000;
+	font-size: 1.1rem;
+	font-weight: 700;
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+	display: inline-flex;
+
+	padding-left: 10px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+}
+.link:hover {
+	text-decoration: none;
+	color: yellow;
+}
+.link::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to top, #fed330 25%, rgba(0, 0, 0, 0) 40%);
+	position: absolute;
+	left: 0;
+	bottom: 2px;
+	z-index: -1;
+	will-change: width;
+	transform: rotate(-2deg);
+	transform-origin: left bottom
+}
+.link:hover::before{
+	width: 0;
+}
+.link::before{
+	transition: width .1s ease-out;
+}
+
+.link:hover::before{
+	transition-duration: .15s;	
+}
+
+.card{
+	margin-bottom: 2em;
+	color: black;
+	text-shadow: 1px 1px 5px white;
+}
+.card-title{
+	font-size: 4.5rem;
+	font-weight: 700;
+	color: black;
+	text-shadow: 2px 2px 2px white;
+}
+.card-text{
+	color:white;
+	font-size: 1.5rem;	
+	text-shadow: 3px 3px 3px black;
+}
+
+.minicard{width: 50rem;}
+
+.footer {padding: 10px; margin-bottom: 20px;}
+.footer a {
+  color: #333;
+  padding: 18px;
+  transition: all .3s ease;
+}
+.footer a:hover {color: orange;}
