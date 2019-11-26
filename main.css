@@ -1,29 +1,60 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-html { font-size: .45rem;}
-@media (min-width: 576px){
-	html { font-size: .7rem;}
+html { font-size: 2.0rem;}
+
+@media (max-width: 812px){
+	html { font-size: 0.85rem;}
 }
-@media (min-width: 768px) {
-	html { font-size: .9rem;}
+@media (max-width: 350px){
+	html { font-size: 0.7rem;}
 }
-@media (min-width: 992px) {
-	html { font-size: 1.0rem;}
-}
-@media (min-width: 1200px) {
-	html { font-size: 1.2rem;}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	html { font-size: 1.5rem;}
 }
 
 body{
-	background-color: #75C2AC;
+	background-color: white;
 	font-family: "Lato";
+	width: 100%;
+    height: 100%;
 }
 
-.container-fluid { max-width: 1200px; }
+section{
+  position: relative;
+  width: 100%;
+  height: 100%;  
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  text-align: center;
+}
+
+a{
+	color: #555;
+	text-decoration: underline;
+}
+
+.project-title {
+	color: black;
+	font-size: 2.5rem;
+	font-weight: 1000;
+	text-shadow: 3px 3px 3px white;
+}
+
+.project-desc {
+	color: black;
+	font-size: 1.0rem;
+	font-weight: 400;
+	text-shadow: 2px 2px 2px white;
+}
+
+.under-project {
+	background-color: #fff8
+}
 
 .link{
 	color: white;
-	text-shadow: 3px 3px 3px #000000;
+	text-shadow: 3px 3px 3px black;
 	font-size: 1.1rem;
 	font-weight: 700;
 	text-decoration: none;
@@ -58,34 +89,6 @@ body{
 .link::before{
 	transition: width .1s ease-out;
 }
-
 .link:hover::before{
 	transition-duration: .15s;	
 }
-
-.card{
-	margin-bottom: 2em;
-	color: black;
-	text-shadow: 1px 1px 5px white;
-}
-.card-title{
-	font-size: 4.5rem;
-	font-weight: 700;
-	color: black;
-	text-shadow: 2px 2px 2px white;
-}
-.card-text{
-	color:white;
-	font-size: 1.5rem;	
-	text-shadow: 3px 3px 3px black;
-}
-
-.minicard{width: 50rem;}
-
-.footer {padding: 10px;}
-.footer a {
-  color: #333;
-  padding: 18px;
-  transition: all .3s ease;
-}
-.footer a:hover {color: orange;}
