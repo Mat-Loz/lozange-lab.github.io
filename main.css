@@ -34,6 +34,30 @@ a{
 	text-decoration: underline;
 }
 
+#scroll {
+	position: fixed;
+	bottom: 30px;
+	width: 100%;
+	text-align: center;
+	z-index: 100;
+	display: block;
+	font-size: 16px;
+	opacity: 0;
+	animation: scrollAnim 2s infinite;
+}
+
+@keyframes scrollAnim {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 .project-title {
 	color: black;
 	font-size: 2.5rem;
