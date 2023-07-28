@@ -41,7 +41,7 @@ a{
 	text-align: center;
 	z-index: 100;
 	display: block;
-	font-size: 16px;
+	font-size: 0.5rem;
 	opacity: 0;
 	animation: scrollAnim 2s infinite;
 }
