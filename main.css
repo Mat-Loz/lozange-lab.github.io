@@ -12,14 +12,19 @@ html { font-size: 2.0rem;}
 	html { font-size: 1.5rem;}
 }
 
-body{
+body {
 	background-color: white;
 	font-family: "Lato";
 	width: 100%;
     height: 100%;
 }
 
-section{
+.intro {
+	background-color: #000A;
+	color: white;
+}
+
+section {
   position: relative;
   width: 100%;
   height: 100%;  
@@ -29,8 +34,40 @@ section{
   text-align: center;
 }
 
-a{
-	color: #555;
+/* video { */
+    /* position: fixed; */
+    /* right: 0; */
+    /* bottom: 0; */
+    /* min-width: 100%;  */
+    /* min-height: 100%; */
+    /* object-fit: fill; */
+	
+    /* z-index: -100; */
+    /* background: url('./imgs/lozange-lab-montage.jpg') no-repeat; */
+    /* background-size: cover; */
+/* } */
+
+.video-container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    video {
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+	  z-index: -100;
+		background: url('./img/lozange-lab-montage.jpg') no-repeat;
+		background-size: cover;
+    }
+}
+
+a {
+	color: yellow;
 	text-decoration: underline;
 }
 
