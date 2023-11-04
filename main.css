@@ -34,19 +34,6 @@ section {
   text-align: center;
 }
 
-/* video { */
-    /* position: fixed; */
-    /* right: 0; */
-    /* bottom: 0; */
-    /* min-width: 100%;  */
-    /* min-height: 100%; */
-    /* object-fit: fill; */
-	
-    /* z-index: -100; */
-    /* background: url('./imgs/lozange-lab-montage.jpg') no-repeat; */
-    /* background-size: cover; */
-/* } */
-
 .video-container{
     position: absolute;
     width: 100%;
@@ -54,13 +41,14 @@ section {
     overflow: hidden;
 
     video {
-      object-fit: cover;
-      width: 100vw;
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-	  z-index: -100;
+		object-fit: cover;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		-webkit-transform: translate3d(0, 0, 0);
+		z-index: -100;
 		background: url('./img/lozange-lab-montage.jpg') no-repeat;
 		background-size: cover;
     }
