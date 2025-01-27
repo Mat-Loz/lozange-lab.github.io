@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Shuttle Shuffle ! Help aliens to find their shuttle.">
     <meta name="author" content="Lozange Lab">
-	<meta name="google-site-verification" content="f258A54YXyNrFkXvu7271G6-qdOfZrnpvlYKSVs9CKg" />
     <meta name="apple-itunes-app" content="app-id=937331329">
 
     <title>Shuttle Shuffle</title>
@@ -183,17 +182,7 @@
     <section id="follow" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Follow Shuttle Shuffle</h2>
-
 				<h3>Join our <a href="https://discord.gg/U4bv5WA">Discord server</a></h3>
-                <ul class="list-inline banner-social-buttons">					
-					<li>
-                        <a target="_blank" href="https://www.facebook.com/LozangeLab" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://twitter.com/lozange_lab" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                </ul>
             </div>
         </div>
     </section>
@@ -245,190 +234,6 @@
     <script src="js/jquery.easing.min.js"></script>
 
     <script src="js/grayscale.js"></script>
-
-    <!-- <style type="text/css"> -->
-      <!-- html, body, #map-canvas { height: 100%; margin: 0; padding: 0; } -->
-    <!-- </style> -->
-    <!-- <script type="text/javascript" -->
-      <!-- src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWDRRaIr_MqDRrhWiIjLMxj7BhBHq2R-U"> -->
-    <!-- </script> -->
-    <script type="text/javascript">
-/*
-
-function init() {
-    // Basic options for a simple Google Map
-    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-    var mapOptions = {
-        // The latitude and longitude to center the map (always required)
-        center: { lat: 49.126701, lng: 6.184000},
-        // How zoomed in you want the map to start at (always required)
-        zoom: 17,
-
-        // Disables the default Google Maps UI components
-        disableDefaultUI: true,
-        scrollwheel: false,
-        draggable: false,        
-
-        // How you would like to style the map. 
-        // This is where you would paste any style found on Snazzy Maps.
-        styles: [{
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#3ABACD"
-            }, {
-                "lightness": 10
-            }]
-        }, {
-            "featureType": "landscape",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#0D212A"
-            }, {
-                "lightness": 2
-            }]
-        }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#FFFFFF"
-            }, {
-                "lightness": 5
-            }]
-        }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#0D212A"
-            }, {
-                "lightness": 5
-            }, {
-                "weight": 1
-            }]
-        }, {
-            "featureType": "road.arterial",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#FFFFFF"
-            }, {
-                "lightness": 20
-            }]
-        }, {
-            "featureType": "road.arterial",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#0D212A"
-            }, {
-                "lightness": 5
-            }, {
-                "weight": 1
-            }]
-        }, {
-            "featureType": "road.local",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#FFFFFF"
-            }, {
-                "lightness": 40
-            }]
-        }, {
-            "featureType": "road.local",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#0D212A"
-            }, {
-                "lightness": 5
-            }, {
-                "weight": 1
-            }]
-        }, {
-            "featureType": "poi",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#0D212A"
-            }, {
-                "lightness": 8
-            }]
-        }, {
-            "elementType": "labels.text.stroke",
-            "stylers": [{
-                "visibility": "off"
-            }, {
-                "color": "#000000"
-            }, {
-                "lightness": 16
-            }]
-        }, {
-            "elementType": "labels.text.fill",
-            "stylers": [{
-                "saturation": 36
-            }, {
-                "color": "#0D212A"
-            }, {
-                "lightness": 0
-            }]
-        }, {
-            "elementType": "labels.icon",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "transit",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 19
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#0D212A"
-            }, {
-                "lightness": 10
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#0D212A"
-            }, {
-                "lightness": 20
-            }, {
-                "weight": 1.2
-            }]
-        }]
-        };
-
-        var map = new google.maps.Map(document.getElementById('map'),
-            mapOptions);
-
-
-        // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
-        var image = 'img/map-marker.png';
-        var myLatLng = new google.maps.LatLng(49.126701, 6.184000);
-        
-        var beachMarker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            icon: image
-        });
-    }
-
-    google.maps.event.addDomListener(window, 'load', init);
-*/
-    </script>
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-45862818-2', 'auto');
-        ga('send', 'pageview');
-    </script>
 
 </body>
 
